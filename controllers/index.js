@@ -4,17 +4,18 @@ const { handleEntries } = require("./image");
 const { handleProfile } = require("./profile");
 
 const handleIndex = db => (req, res) => {
-  db.select()
-    .table("users")
-    .then(data => res.json(data));
-}
+	// db.select()
+	//   .table("users")
+	//   .then(data => res.json(data));
+	res.status(200).send("Welcome to facedetection API");
+};
 
 module.exports = {
-  controllers: {
-    handleRegister,
-    handleSignin,
-    handleEntries,
-    handleProfile,
-    handleIndex
-  }
+	controllers: {
+		handleRegister,
+		handleSignin,
+		handleEntries,
+		handleProfile,
+		handleIndex
+	}
 };
