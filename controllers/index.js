@@ -3,7 +3,7 @@ const { handleSignin } = require("./signin");
 const { handleEntries } = require("./image");
 const { handleProfile } = require("./profile");
 
-const handleIndex = db => (req, res) => {
+const handleIndex = (req, res) => {
 	// db.select()
 	//   .table("users")
 	//   .then(data => res.json(data));

@@ -10,7 +10,7 @@ app.use(cors());
 const { controllers } = require("./controllers");
 const { db } = require("./db");
 
-app.get("/", controllers.handleIndex(db));
+app.get("/", controllers.handleIndex);
 app.get("/profile/:id", controllers.handleProfile(db));
 app.post("/signin", controllers.handleSignin(db, bcrypt));
 app.post(
